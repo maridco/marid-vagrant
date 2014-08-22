@@ -62,7 +62,8 @@ package { 'nodejs':
 
 class { 'cassandra':
   cluster_name => 'cassandra_clr',
-    seeds        => [ '127.0.0.1', ],
+  seeds        => [ '127.0.0.1', ],
+  timeout     => 2800,
 }
 
 # --- Ruby ---------------------------------------------------------------------
