@@ -1,0 +1,13 @@
+[submodule "puppet/modules/apt"]
+	path = puppet/modules/apt
+	url = https://github.com/puppetlabs/puppetlabs-apt.git
+	branch = 1.4.x
+[submodule "puppet/modules/java"]
+	path = puppet/modules/java
+	url = https://github.com/puppetlabs/puppetlabs-java.git
+[submodule "puppet/modules/stdlib"]
+	path = puppet/modules/stdlib
+	url = https://github.com/puppetlabs/puppetlabs-stdlib.git
+[submodule "puppet/modules/cassandra"]
+	path = puppet/modules/cassandra
+	url = https://github.com/sandlbn/puppet-cassandra.git
