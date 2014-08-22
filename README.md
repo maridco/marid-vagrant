@@ -14,5 +14,11 @@ How to use marid-vagrant
 `$vagrant ssh`
 5. Clone marid repository<br />
 `$git clone marid-git-url`
+6. Change directory and install dependencies<br />
+`$cd backend && bundle install`
+7. Start server<br />
+`$bundle exec rails s`
+8. Open website in your local browser<br />
+`http://127.0.0.1:3000`
 
-[tested on Debian, RedHat 6.5, MacOSX 10.9]<br />
+[tested on Debian, RedHat 6.5, MacOSX 10.9, should works also on Windows (install virtualbox, vagrant, git)]<br />
