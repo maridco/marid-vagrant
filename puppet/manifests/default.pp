@@ -78,6 +78,19 @@ exec { 'install_stuff':
   command => "${as_vagrant} 'bundle install'"
 }
 
+exec { 'clone_vim_ruby':
+  command => "${as_vagrant} 'git clone git://github.com/vim-ruby/vim-ruby.git ~/.vim/bundle/vim-ruby'"
+}
+
+exec { 'clone_patogen':
+  command => "${as_vagrant} 'mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim'"
+}
+
+exec { 'infect_vim':
+  command => "touch /home/vagrant/.vimrc && echo 'execute pathogen#infect()\nsyntax on\nfiletype plugin indent on' > /home/vagrant/.vimrc"
+}
+
+
 # Needed for docs generation.
 exec { 'update-locale':
   command => 'update-locale LANG=en_US.UTF-8 LANGUAGE=en_US.UTF-8 LC_ALL=en_US.UTF-8'
