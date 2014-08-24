@@ -71,10 +71,21 @@ package { 'nodejs':
   ensure => installed
 }
 
-class { 'cassandra':
-  cluster_name => 'cassandra_clr',
-  seeds        => [ '10.0.2.15', ],
+class { '::mysql::server':
+  root_password    => 'passw0rd',
+
 }
+
+mysql::db { 'mariddb':
+  user     => 'marid_admin',
+  password => '3ebaKeWu',
+  host     => 'localhost',
+}
+
+#class { 'cassandra':
+#  cluster_name => 'cassandra_clr',
+#  seeds        => [ '10.0.2.15', ],
+#}
 
 # --- Ruby ---------------------------------------------------------------------
 

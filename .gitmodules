@@ -11,3 +11,6 @@
 [submodule "puppet/modules/cassandra"]
 	path = puppet/modules/cassandra
 	url = https://github.com/sandlbn/puppet-cassandra.git
+[submodule "puppet/modules/mysql"]
+	path = puppet/modules/mysql
+	url = https://github.com/puppetlabs/puppetlabs-mysql.git
