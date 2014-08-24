@@ -21,4 +21,4 @@ How to use marid-vagrant
 8. Open website in your local browser<br />
 `http://127.0.0.1:3000`
 
-[tested on Debian, RedHat 6.5, MacOSX 10.9, should works also on Windows (install virtualbox, vagrant, git)]<br />
+[Tested on Debian, Red Hat 6.5, Mac OS X Mavericks 10.9, should also work on Windows (install virtualbox, vagrant, git)]<br />
