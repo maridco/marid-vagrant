@@ -1,5 +1,6 @@
 $ar_databases = ['activerecord_unittest', 'activerecord_unittest2']
 $as_vagrant   = 'sudo -u vagrant -H bash -l -c'
+$as_root   = 'sudo -H bash -l -c'
 $home         = '/home/vagrant'
 
 # Pick a Ruby version modern enough, that works in the currently supported Rails
@@ -25,8 +26,18 @@ class { 'apt_get_update':
   stage => preinstall
 }
 
-class { 'java':
-  distribution => 'jre',
+# --- Java -------------------------------------------------------------------
+
+exec { 'add_oracle_repository':
+  command => "${as_root} 'add-apt-repository ppa:webupd8team/java && apt-get update'",
+}
+
+exec { 'add_licence_oracle_jdk':
+  command => "${as_root} 'echo oracle-java7-installer shared/accepted-oracle-license-v1-1 select true | sudo /usr/bin/debconf-set-selections'",
+}
+
+package {'oracle-java7-installer':
+  ensure => installed;
 }
 
 # --- SQLite -------------------------------------------------------------------
@@ -62,8 +73,7 @@ package { 'nodejs':
 
 class { 'cassandra':
   cluster_name => 'cassandra_clr',
-  seeds        => [ '127.0.0.1', ],
-  timeout     => 2800,
+  seeds        => [ '10.0.2.15', ],
 }
 
 # --- Ruby ---------------------------------------------------------------------
@@ -80,15 +90,15 @@ exec { 'install_stuff':
 }
 
 exec { 'clone_vim_ruby':
-  command => "${as_vagrant} 'git clone git://github.com/vim-ruby/vim-ruby.git ~/.vim/bundle/vim-ruby'"
+  command => "${as_vagrant} 'git clone git://github.com/vim-ruby/vim-ruby.git ~/.vim/bundle/vim-ruby|| true'"
 }
 
 exec { 'clone_patogen':
-  command => "${as_vagrant} 'mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim'"
+  command => "${as_vagrant} 'mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim || true'"
 }
 
 exec { 'infect_vim':
-  command => "touch /home/vagrant/.vimrc && echo 'execute pathogen#infect()\nsyntax on\nfiletype plugin indent on' > /home/vagrant/.vimrc"
+  command => "touch /home/vagrant/.vimrc && echo 'execute pathogen#infect()\nsyntax on\nfiletype plugin indent on' > /home/vagrant/.vimrc || true"
 }
 
 
