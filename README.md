@@ -23,7 +23,7 @@ How to use marid-vagrant
 9. Mysql passwords:<br />
 
 root = 'passw0rd' <br/><br/>
-db = 'mariddb<br />
+db = 'mariddb'<br />
 user = 'marid_admin' <br />
 password = '3ebaKeWu' <br/>
 
