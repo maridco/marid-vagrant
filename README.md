@@ -20,5 +20,11 @@ How to use marid-vagrant
 `$bundle exec rails s`
 8. Open website in your local browser<br />
 `http://127.0.0.1:3000`
+9. Mysql passwords:<br />
+
+root = 'passw0rd' <br/><br/>
+db = 'mariddb<br />
+user = 'marid_admin' <br />
+password = '3ebaKeWu' <br/>
 
 [Tested on Debian, Red Hat 6.5, Mac OS X Mavericks 10.9, should also work on Windows (install virtualbox, vagrant, git)]<br />
