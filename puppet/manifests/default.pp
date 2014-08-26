@@ -40,6 +40,10 @@ package {'oracle-java7-installer':
   ensure => installed;
 }
 
+package {'libpq-dev':
+  ensure => installed;
+}
+
 # --- SQLite -------------------------------------------------------------------
 
 package { ['sqlite3', 'libsqlite3-dev']:
