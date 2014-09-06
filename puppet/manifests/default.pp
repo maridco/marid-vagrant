@@ -105,8 +105,9 @@ exec { 'clone_patogen':
   command => "${as_vagrant} 'mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim || true'"
 }
 
-exec { 'infect_vim':
-  command => "touch /home/vagrant/.vimrc && echo 'execute pathogen#infect()\nsyntax on\nfiletype plugin indent on' > /home/vagrant/.vimrc || true"
+exec { 'vimrc':
+  command => "/usr/bin/wget -q https://raw.githubusercontent.com/turboMaCk/Dotfiles/master/server/.vimrc -O /home/vagrant/.vimrc",
+  creates => "/home/vagrant/.vimrc",
 }
 
 
