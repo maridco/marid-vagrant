@@ -3,7 +3,6 @@
 ### Marid Vagrant
 
 ## How to use marid-vagrant 
---------
 
 1.  Clone git repository to your home directory<br />
 `$git clone --recursive https://github.com/maridco/marid-vagrant.git`
