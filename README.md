@@ -1,4 +1,6 @@
-marid-vagrant
+![](https://raw.githubusercontent.com/maridco/marid/master/app/assets/images/Marid_Logo_web.png?token=5732914__eyJzY29wZSI6IlJhd0Jsb2I6bWFyaWRjby9tYXJpZC9tYXN0ZXIvYXBwL2Fzc2V0cy9pbWFnZXMvTWFyaWRfTG9nb193ZWIucG5nIiwiZXhwaXJlcyI6MTQxMDc2NTE2NX0%3D--e60bac1c145d8ad8269d5f2f3b853ffed97352a8)
+
+### Marid Vagrant
 =============
 
 How to use marid-vagrant 
