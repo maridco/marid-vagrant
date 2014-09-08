@@ -27,3 +27,7 @@ user = 'marid' <br />
 password = 'passw0rd' <br/>
 
 [Tested on Debian, Red Hat 6.5, Mac OS X Mavericks 10.9, should also work on Windows (install virtualbox, vagrant, git)]<br />
+
+## License
+
+Copyright 2014 Marid. All Rights Reserved. Proprietary and Confidential.
