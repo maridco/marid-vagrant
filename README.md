@@ -30,5 +30,5 @@ password = 'passw0rd' <br/>
 
 ## License
 
-Marid is released under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0). <br/>
+##### Marid is released under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0).
 The full license text is included in `LICENSE.txt`.
